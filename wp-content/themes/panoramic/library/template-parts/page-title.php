@@ -1,5 +1,6 @@
 <?php
-if ( !is_front_page() ) :
+// if ( !is_front_page() ) :
+if ( true ):
 ?>
     
     <header class="entry-header">

@@ -475,7 +475,7 @@ a:active {
 	width: 100%;
 }
 .main-navigation.translucent {
-	position: absolute;
+	// position: absolute;
 	z-index: 99999;
 }
 
@@ -1090,6 +1090,10 @@ div.wpcf7-validation-errors {
 .slider-container {
 	overflow-x: hidden;
     width: 100%;
+}
+
+.slider-container > * {
+	margin: 0 auto;
 }
 
 .slider-container.default {
@@ -2332,7 +2336,6 @@ object {
 		line-height: 27px !important;
 	}
 }
-
 
 /*--------------------------------------------------------------
 Fallback CSS for Customizer Library Styles
