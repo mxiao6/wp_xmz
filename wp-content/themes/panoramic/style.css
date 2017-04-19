@@ -795,14 +795,14 @@ ul.no-bullets {
 .woocommerce-page #container,
 .content-area {
 	width: 75%;
-	float: left;
+	float: right;
 	padding: 0 2% 0 0;
 }
 
 .widget-area {
 	width: 25%;
 	float: left;
-	padding: 15px 0 0 2%;
+	padding: 15px 2% 0 0;
 }
 
 .content-area.full-width,
@@ -1089,7 +1089,9 @@ div.wpcf7-validation-errors {
 
 .slider-container {
 	overflow-x: hidden;
-    width: 100%;
+    width: 75%;
+    float: right;
+    margin-bottom: 20px;
 }
 
 .slider-container > * {

@@ -23,7 +23,15 @@ get_header(); ?>
     
     <?php endif; ?>
 
+    <?php get_sidebar(); ?>
+
 	<div id="primary" class="content-area <?php echo !is_active_sidebar( 'sidebar-1' ) ? 'full-width' : ''; ?>">
+		
+		<?php
+			get_template_part( 'library/template-parts/slider' );
+		?>
+
+
 		<main id="main" class="site-main" role="main">
         
         <?php get_template_part( 'library/template-parts/page-title' ); ?>
@@ -54,5 +62,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-    <?php get_sidebar(); ?>
 <?php get_footer(); ?>

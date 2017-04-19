@@ -36,6 +36,9 @@ global $woocommerce;
     var panoramicSliderTransitionSpeed = parseInt(<?php echo intval( get_theme_mod( 'panoramic-slider-transition-speed', 450 ) ); ?>);
 </script>
 
+
+<div id="content" class="site-content site-container <?php echo ( $no_sidebar ) ? 'no-sidebar' : ''; ?>">
+
 <?php
 if ( is_front_page() && get_theme_mod( 'panoramic-slider-type', 'panoramic-no-slider' ) != 'panoramic-no-slider' ) :
 	get_template_part( 'library/template-parts/slider' );
@@ -49,6 +52,4 @@ $no_sidebar = false;
 if ( ( $page_template == 'template-left-sidebar.php' && !is_active_sidebar( 'sidebar-1' ) ) ) {
 	$no_sidebar = true;
 }
-?>
-
-<div id="content" class="site-content site-container <?php echo ( $no_sidebar ) ? 'no-sidebar' : ''; ?>">
+?> 
