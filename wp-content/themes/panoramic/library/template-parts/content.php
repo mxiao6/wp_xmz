@@ -65,7 +65,7 @@ if ( !has_post_thumbnail() ) {
     				'after'  => '</div>',
     			) );
     		?>
-    	</div><!-- .entry-content -->
+    	</div><!-- .entry-content ???-->
 
     	<footer class="entry-footer">
     		<?php panoramic_entry_footer(); ?>

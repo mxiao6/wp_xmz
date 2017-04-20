@@ -7,7 +7,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+	<a href="<?php the_permalink(); ?>">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</a>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
@@ -16,7 +18,7 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div><!-- .entry-content ???-->
 
 	<footer class="entry-footer">
 		<?php edit_post_link( __( 'Edit', 'panoramic' ), '<span class="edit-link">', '</span>' ); ?>

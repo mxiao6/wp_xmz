@@ -19,23 +19,25 @@ get_header(); ?>
     
 	<div id="primary" class="content-area <?php echo !is_active_sidebar( 'sidebar-1' ) ? 'full-width' : ''; ?>">
 		<main id="main" class="site-main" role="main">
-            
-            <?php get_template_part( 'library/template-parts/page-title' ); ?>
-
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'library/template-parts/content', 'page' ); ?>
-
+			
+			<div class="row-fluid">
 				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
+					global $post;
+					$args = array( 'posts_per_page' => 3, 'category' => 'Front_page' );
 
-			<?php endwhile; // end of the loop. ?>
+					$myposts = get_posts( $args );
+					foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+						<div class="span4">
+							<?php get_template_part( 'library/template-parts/content', 'page' ); ?>
+						</div>
+					<?php endforeach; 
 
-		</main><!-- #main -->
+				wp_reset_postdata();?>
+			</div>
+
+			
+
+		</main><!-- #main ??? -->
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

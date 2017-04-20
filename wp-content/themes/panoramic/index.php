@@ -31,11 +31,7 @@ get_header(); ?>
 			get_template_part( 'library/template-parts/slider' );
 		?>
 
-
 		<main id="main" class="site-main" role="main">
-        
-        <?php get_template_part( 'library/template-parts/page-title' ); ?>
-
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
@@ -48,6 +44,9 @@ get_header(); ?>
 					 */
 					get_template_part( 'library/template-parts/content', get_post_format() );
 				?>
+
+				<?php endif; ?>
+					
 
 			<?php endwhile; ?>
 
